@@ -1,5 +1,6 @@
 import unittest
 from user import User
+from user import Credentials
 
 class TestUser(unittest.TestCase):
 
@@ -29,6 +30,23 @@ class TestUser(unittest.TestCase):
         
         self.new_user.save_user()
         self.assertEqual(len(User.user_list),1)
+
+class TestCredentials(unittest.TestCase):   
+    """
+    A test class that defines test cases for credentials class
+    """ 
+    def setUp(self):
+        '''
+        Method that runs before each individual credentials test methods run.
+        '''
+        self.new_credentials = Credentials('dee','daisychelangat','284565q')
+
+def tearDown(self):
+        '''
+        method that does clean up after each test case has run.
+        '''
+        Credentials.credentials_list = []
+
 
 
 if __name__ == '__main__':
