@@ -41,12 +41,27 @@ class TestCredentials(unittest.TestCase):
         '''
         self.new_credentials = Credentials('dee','daisychelangat','284565q')
 
-def tearDown(self):
+    def tearDown(self):
         '''
         method that does clean up after each test case has run.
         '''
         Credentials.credentials_list = []
 
+    def test_details(self):
+        """
+        Test case to check if a new Credentials instance has been initialized correctly
+        """
+        
+        self.assertEqual(self.new_credentials.account,'dee')
+        self.assertEqual(self.new_credentials.username,'daisychelangat')
+        self.assertEqual(self.new_credentials.password,'284565q') 
+
+    def test_save_credentials(self):
+        """
+        test case to test if the credential object is saved into the credentials list.
+        """
+        self.new_credentials.save_user_credentials()
+        self.assertEqual(len(Credentials.credentials_list),1)
 
 
 if __name__ == '__main__':

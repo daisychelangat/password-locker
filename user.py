@@ -27,3 +27,16 @@ class Credentials:
         self.account = account
         self.password = password
         self.username = username
+
+#  @classmethod
+#     def verify_user(cls,username,password):
+#         a_user = ''
+#         for user in User.user_list:
+#             if(user.username == username and user.password == password):
+#                 a_user == user.username
+#                 return a_user
+    def save_user_credentials(self):
+        '''
+        save_user_credential method saves a new user object to credentials list
+        '''
+        Credentials.credentials_list.append(self)
