@@ -1,3 +1,4 @@
+#!/usr/bin/python -tt
 import unittest
 from user import User
 from user import Credentials
@@ -21,7 +22,6 @@ class TestUser(unittest.TestCase):
         """
        self.assertEqual(self.new_user.username,'daisychelangat')
        self.assertEqual(self.new_user.password,'200084565q')
-
     def test_save_user(self):
         '''
         test case to check if the new instance of the user object has been created
@@ -106,9 +106,6 @@ class TestCredentials(unittest.TestCase):
         
         self.new_credentials.delete_credentials()
         self.assertEqual(len(Credentials.credentials_list),1)
-
-
-
 
 if __name__ == '__main__':
         unittest.main()

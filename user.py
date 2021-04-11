@@ -1,3 +1,4 @@
+#!/usr/bin/python -tt
 class User:
     """
     Class that generates new instances of users and respective passwords
@@ -18,7 +19,7 @@ class User:
         '''
         User.user_list.remove(self)
 
-   @classmethod
+    @classmethod
     def display_user(cls):
         return cls.user_list
 class Credentials:
@@ -28,7 +29,7 @@ class Credentials:
         self.password = password
         self.username = username
 
- @classmethod
+@classmethod
     def verify_user(cls,username,password):
         a_user = ''
         for user in User.user_list:
