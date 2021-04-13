@@ -1,27 +1,23 @@
-#!/usr/bin/python -tt
 import unittest
 from user import User
 from user import Credentials
 
-class TestUser(unittest.TestCase):
-
-    '''
-    Test class that defines test cases for the user class behaviours.
-
-    Args:
-        unittest.TestCase: TestCase class that helps in creating test cases
-    '''
+class TestClass(unittest.TestCase):
+  
     def setUp(self):
         """
         a method that runs before the test
         """
         self.new_user = User('daisychelangat','200084565q')
+
     def test_init(self):
         """
         test case to check if the object in initialized correctly
         """
-       self.assertEqual(self.new_user.username,'daisychelangat')
-       self.assertEqual(self.new_user.password,'200084565q')
+      
+        self.assertEqual(self.new_user.username,'daisychelangat')
+        self.assertEqual(self.new_user.password,'200084565q')
+
     def test_save_user(self):
         '''
         test case to check if the new instance of the user object has been created
@@ -57,12 +53,11 @@ class TestCredentials(unittest.TestCase):
 
     def test_save_credentials(self):
         """
-        test case to test if the credential object is saved into the credentials list.
+        test case to test if the crential object is saved into the credentials list.
         """
         self.new_credentials.save_user_credentials()
         self.assertEqual(len(Credentials.credentials_list),1)
 
-    
     def test_save_many_account(self):
         '''
         test to check if we can save multiple credentials objects to our credentials list

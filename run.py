@@ -1,4 +1,4 @@
-#!/usr/bin/python -tt
+
 from user import User,Credentials
 
 def create_new_user(username,password):
@@ -58,7 +58,7 @@ def check_credentials(account):
 
 def generate_password(self):
     ''' 
-    function tht generates password randomly
+    function that generates password randomly
     '''
     auto_password = Credentials.generate_password(self)
     return auto_password
@@ -119,7 +119,7 @@ def main():
                     password = generate_password(password)
                     break
                 else:
-                    print("Invalid password,please try again")
+                    print("Invalid password please try again")
             save_credentials(create_new_credential(account,username,password))
             print('\n')
             print(f"Account Credential for:Account {account} :Username: {username} - Password:{password} created succesfully")
