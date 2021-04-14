@@ -18,3 +18,5 @@ You can use code . or atom . to open it.
 
 #Contact Details
 Reach out to me on my e-mail daisyrop2000@gmail.com
+
+#LICENSE-https://github.com/daisychelangat/password-locker/blob/main/LICENSE
